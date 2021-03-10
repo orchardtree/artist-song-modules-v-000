@@ -2,14 +2,15 @@ require 'pry'
 
 class Artist
   extend Memorable::ClassMethods
+  extend Findable::ClassMethods
   
   attr_accessor :name
   attr_reader :songs
 
-  @@artists = []
+  @@all = []
 
   def initialize
-    @@artists << self
+    @@all << self
     @songs = []
   end
 =begin
@@ -18,7 +19,7 @@ class Artist
   end
 =end
   def self.all
-    @@artists
+    @@all
   end
 =begin
   def self.reset_all
