@@ -1,7 +1,8 @@
 module Memorable
-  class InstanceMethods
+  module InstanceMethods
+    
   end
-  class ClassMethods
+  module ClassMethods
+    
   end
-  
 end
