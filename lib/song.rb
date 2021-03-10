@@ -2,14 +2,15 @@ require 'pry'
 
 class Song
   extend Memorable::ClassMethods
+  extend Findable::ClassMethods
   
   attr_accessor :name
   attr_reader :artist
 
-  @@songs = []
+  @@all = []
 
   def initialize
-    @@songs << self
+    @@all << self
   end
 =begin
   def self.find_by_name(name)
@@ -17,7 +18,7 @@ class Song
   end
 =end
   def self.all
-    @@songs
+    @@all
   end
 =begin
   def self.reset_all
